@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="2.0" title="MakeIPPacket" device="LFE3-35EA-8FN484C" default_implementation="MakeIPPacket">
+    <Options/>
+    <Implementation title="MakeIPPacket" dir="MakeIPPacket" description="MakeIPPacket" default_strategy="Strategy1">
+        <Options>
+            <Option name="include path" value="../../verilog-gen"/>
+        </Options>
+
+        <!-- Source files -->
+        <Source name="../../verilog-gen/com/synflow/net/ip/MakeIPPacket_store.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../verilog-gen/com/synflow/net/ip/MakeIPPacket.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="MakeIPPacket.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="MakeIPPacket.xcf" type="ispVM Download Project" type_short="ispVM">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="Strategy1.sty"/>  
+</BaliProject>

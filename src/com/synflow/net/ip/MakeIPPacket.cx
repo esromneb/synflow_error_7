@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2015 Ben
+ * Boiled down version of MakeIPPacket.cx to demonstrate error:
+ *   Can't mix blocking and non-blocking assignments to a variable
+ */
+package com.synflow.net.ip;
+
+
+network MakeIPPacket {
+	
+	out u8 packet (sync);
+
+	store = new task {
+		out u16 data_o (sync combinational);
+	
+		
+		void loop() {
+			data_o.write(0);
+			packet.write(0);
+		}
+	};
+}
